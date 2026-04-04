@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivasayi AI Redirect</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e9f7ef, #f7fbf3);
+      color: #173a2a;
+    }
+
+    .card {
+      width: min(560px, 92vw);
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(23, 58, 42, 0.12);
+      padding: 24px;
+      text-align: center;
+    }
+
+    a {
+      color: #12654b;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Opening Vivasayi AI...</h1>
+    <p>If you are not redirected automatically, open <a id="appLink" href="http://localhost:5000">http://localhost:5000</a>.</p>
+  </main>
+
+  <script>
+    (function redirectToApp() {
+      const target = "http://localhost:5000";
+      const link = document.getElementById("appLink");
+      link.href = target;
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+:root {
+  --bg: #f2f4ef;
+  --ink: #132a1e;
+  --ink-soft: #3f5f4f;
+  --accent: #ef7b2d;
+  --accent-2: #12654b;
+  --surface: #ffffff;
+  --line: #d5ddcf;
+  --danger: #b00020;
+  --shadow: 0 20px 40px rgba(11, 35, 22, 0.08);
+}
+
+html {
+  font-size: 17px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.55;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 10%, #fef6de 0%, transparent 30%),
+    radial-gradient(circle at 90% 20%, #ddf1e6 0%, transparent 34%),
+    linear-gradient(160deg, var(--bg), #e9efe4 60%, #f4f0e5);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-shape {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.bg-shape-1 {
+  width: 270px;
+  height: 270px;
+  background: rgba(239, 123, 45, 0.22);
+  right: -60px;
+  top: 90px;
+}
+
+.bg-shape-2 {
+  width: 340px;
+  height: 340px;
+  background: rgba(18, 101, 75, 0.2);
+  left: -90px;
+  bottom: -70px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 32px;
+  border-bottom: 1px solid rgba(19, 42, 30, 0.12);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.logo,
+h2,
+h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.logo {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: var(--accent-2);
+}
+
+.page {
+  width: min(1220px, calc(100vw - 28px));
+  margin: clamp(20px, 4vw, 44px) auto;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 34px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.1vw, 2.8rem);
+  margin: 0 0 10px;
+  line-height: 1.12;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+  margin: 0 0 8px;
+}
+
+.hero h2 {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  margin: 10px 0 14px;
+  line-height: 1.15;
+}
+
+.hero p {
+  font-size: 1.12rem;
+  max-width: 65ch;
+}
+
+.badge {
+  display: inline-block;
+  margin: 0;
+  background: #f5e6d7;
+  color: #9a4e1e;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 14px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--accent-2), #1f7f60);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(18, 101, 75, 0.25);
+}
+
+.btn-outline {
+  background: #fff;
+  color: var(--accent-2);
+  border: 1px solid #b8cdbf;
+}
+
+.feature-grid,
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.feature-card {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card p {
+  font-size: 1rem;
+}
+
+.subtitle {
+  color: var(--ink-soft);
+  font-size: 1.06rem;
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.97rem;
+  font-weight: 600;
+}
+
+input,
+select {
+  border: 1px solid #bbccbf;
+  border-radius: 12px;
+  padding: 12px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.weather-inline {
+  margin: 14px 0;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.error {
+  background: #ffecef;
+  border: 1px solid #ffccd5;
+  color: var(--danger);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  margin-bottom: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card {
+  border: 1px solid #dce7db;
+  border-radius: 16px;
+  padding: 20px;
+  background: linear-gradient(180deg, #fff, #f7faf5);
+}
+
+.metric {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  margin: 8px 0 0;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+.recommend-list,
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.recommend-list li,
+.history-list li {
+  border: 1px solid #dbe5d8;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.97rem;
+  background: #fcfefb;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  padding: 26px;
+  font-size: 1.03rem;
+}
+
+.spinner {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 4px solid #dce8df;
+  border-top-color: var(--accent);
+  animation: spin 1s linear infinite;
+}
+
+.compact {
+  margin-top: 18px;
+}
+
+#comparisonChart {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 22px;
+  font-size: 0.95rem;
+  color: #4f685b;
+}
+
+.reveal {
+  animation: riseIn 0.55s ease both;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 16px;
+  }
+
+  .feature-grid,
+  .results-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 16px;
+  }
+
+  .nav {
+    width: 100%;
+    gap: 10px 14px;
+  }
+
+  .page {
+    margin: 24px auto;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .weather-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #comparisonChart {
+    width: 100%;
+    height: auto;
+  }
+}

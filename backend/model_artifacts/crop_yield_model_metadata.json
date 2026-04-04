@@ -1,0 +1,26 @@
+{
+  "dataset_path": "C:\\Users\\srisa\\OneDrive\\Documents\\Desktop\\vibe\\Crop Yeild Data.csv",
+  "model_path": "C:\\Users\\srisa\\OneDrive\\Documents\\Desktop\\vibe\\backend\\model_artifacts\\crop_yield_model.joblib",
+  "target_column": "Yield",
+  "feature_columns": [
+    "Crop",
+    "Crop_Year",
+    "Season",
+    "State",
+    "Area",
+    "Production",
+    "Annual_Rainfall",
+    "Fertilizer",
+    "Pesticide",
+    "Avg_Temperature",
+    "Max_Temperature",
+    "Min_Temperature"
+  ],
+  "metrics": {
+    "mae": 11.875850067277097,
+    "rmse": 197.19386781485892,
+    "r2": 0.9514684380077605,
+    "train_rows": 15751,
+    "test_rows": 3938
+  }
+}
